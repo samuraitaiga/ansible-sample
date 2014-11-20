@@ -4,5 +4,7 @@
   tasks:
     - name: git clone django sample app
       git: repo=https://github.com/samuraitaiga/django-sample.git dest=/opt/django-sample
+    - name: install pip
+      easy_install: name=pip
     - name: django dependency install
       pip: requirements=/opt/django-sample/requirements.txt
